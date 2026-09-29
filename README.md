@@ -1,67 +1,71 @@
-# 🚀 Career Path Recommender & Integrated Resume Builder
+# 🚀 FuturePathX | Career Path Recommender & Integrated Resume Builder
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=render)](https://futurepathx-career-recommender.onrender.com)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Framework](https://img.shields.io/badge/Framework-Flask-black?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-An intelligent, end-to-end web application designed to help individuals discover their ideal career trajectories based on their skills, interests, and educational background. Once a career path is selected, users can seamlessly generate a modern, professionally tailored resume ready for job applications.
+**FuturePathX** is an intelligent, end-to-end career guidance platform designed to bridge the gap between skill assessment, career discovery, and job readiness[cite: 1]. By evaluating users' technical skills, personal interests, domain knowledge, and academic backgrounds, the application provides personalized career recommendations, pinpoints critical skill gaps, and instantly generates an ATS-optimized resume tailored to the target role[cite: 1].
 
-🌐 **Live Demo:** [https://futurepathx-career-recommender.onrender.com](https://futurepathx-career-recommender.onrender.com)
+🌐 **Live Application:** [https://futurepathx-career-recommender.onrender.com](https://futurepathx-career-recommender.onrender.com)
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#-overview)
+- [Key Features](#-key-features)
+- [System Architecture & Workflow](#-system-architecture--workflow)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Screenshots & UI Walkthrough](#-screenshots--ui-walkthrough)
+- [Getting Started Locally](#-getting-started-locally)
+- [Deployment](#-deployment)
+- [Future Roadmap](#-future-roadmap)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 📌 Overview
+
+Navigating career transitions or figuring out entry-level opportunities can often feel overwhelming and fragmented. **FuturePathX** streamlines this trajectory into a single dynamic pipeline:
+
+1. **Self-Assessment:** Users complete an interactive questionnaire evaluating their core skills, domain preferences, and educational background[cite: 1].
+2. **Recommendation Engine:** The algorithm analyzes user inputs against multi-faceted career profiles (e.g., Data Science, Web Development, Cyber Security, Cloud Engineering) to score role alignment.
+3. **Skill Gap Analysis:** Highlights exact technical and soft skills users need to master to reach full proficiency in their chosen path.
+4. **Automated Resume Builder:** Dynamically populates user details into clean, ATS-compliant resume layouts customized specifically for their recommended career trajectory[cite: 1].
 
 ---
 
 ## 🌟 Key Features
 
-* 🎯 **Smart Career Recommendation:** Recommends potential career paths using interactive questionnaires and skill assessment models.
-* 📄 **Integrated Resume Builder:** Build, edit, and export crisp, professional resumes tailored to your recommended career path.
-* 📊 **Skill Gap Analysis:** Highlights essential skills needed for your chosen role and suggests areas for growth.
-* 🎨 **Interactive UI:** Clean, intuitive, and responsive user interface built for smooth user interaction.
-* ⚡ **Real-Time Export:** Instantly download or preview your generated resume in ATS-friendly formats.
+* 🎯 **Smart Career Matching:** Data-driven evaluation scoring user responses to match them with optimal career paths.
+* 📈 **Skill Gap Identification:** Pinpoints missing competencies required for chosen target roles to guide focused learning.
+* 📄 **Integrated Resume Generator:** Formats and constructs tailored, ATS-friendly resumes directly from user assessment profiles[cite: 1].
+* 🎨 **Interactive & Responsive UI:** Designed with a clean, modern interface for smooth user engagement across devices.
+* ⚡ **Instant Export & Preview:** Easily review and export generated resumes ready for immediate job applications.
 
 ---
 
-## 🖼️ Preview & Screenshots
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center"><b>Assessment & Questionnaire</b></td>
-      <td align="center"><b>Career Guidance & Results</b></td>
-    </tr>
-    <tr>
-      <td><img src="assets/test/q1.png" alt="Questionnaire Screen 1" width="400"/></td>
-      <td><img src="assets/test/q2.png" alt="Questionnaire Screen 2" width="400"/></td>
-    </tr>
-    <tr>
-      <td align="center"><b>Skill Alignment Check</b></td>
-      <td align="center"><b>Resume Generation</b></td>
-    </tr>
-    <tr>
-      <td><img src="assets/test/q3.png" alt="Assessment Question" width="400"/></td>
-      <td><img src="assets/test/q4.png" alt="Result & Resume Builder" width="400"/></td>
-    </tr>
-  </table>
-</div>
-
----
-
-## 🛠️ Tech Stack
-
-* **Backend / ML:** Python, Flask / Django *(or appropriate Python framework)*
-* **Frontend:** HTML5, CSS3, JavaScript, Jinja2 / Bootstrap
-* **Deployment:** [Render](https://render.com/)
-
----
-
-## 📂 Project Structure
+## 🏗️ System Architecture & Workflow
 
 ```text
-futurepathx-career-recommender/
-├── assets/
-│   └── test/          # Application screenshots and demo assets
-├── static/            # CSS styles, JavaScript files, and images
-├── templates/         # HTML template files
-├── app.py             # Main application entry point
-├── requirements.txt   # Dependencies list
-├── .gitignore         # Git ignore rules
-└── README.md          # Project documentation
+ ┌──────────────────────────┐
+ │     User Assessment      │  <-- Interactive Skill & Domain Questionnaire
+ └─────────────┬────────────┘
+               │
+               ▼
+ ┌──────────────────────────┐
+ │  Recommendation Engine   │  <-- Scores Profile vs. Career Thresholds
+ └─────────────┬────────────┘
+               │
+               ▼
+ ┌──────────────────────────┐
+ │   Results & Analytics    │  <-- Matched Roles & Skill Gap Breakdown
+ └─────────────┬────────────┘
+               │
+               ▼
+ ┌──────────────────────────┐
+ │ Integrated Resume Builder│  <-- Pre-populated, ATS-Friendly Resume Generation
+ └──────────────────────────┘
